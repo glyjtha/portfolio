@@ -6,10 +6,6 @@ nav ul {
   padding: 0; /* Reset padding */
 }
 
-nav li {
-  /* No additional styling needed for <li> since Flexbox applies to <ul> */
-}
-
 /* Body styling */
 body {
   font: 100%/1.5 system-ui; /* Readable font and line height */
