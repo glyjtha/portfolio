@@ -1,42 +1,43 @@
-nav ul,
-nav li {
-    display: contents; /* Makes <ul> and <li> "invisible" in terms of layout */
-}
-
-body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-    margin-inline: max(1em, (100% - 100ch) / 2);
-
-  }
-  
+/* Reset <ul> and <li> */
 nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
+  display: flex; /* Flexbox layout for horizontal navigation */
+  list-style: none; /* Remove bullets */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+nav li {
+  /* No additional styling needed for <li> since Flexbox applies to <ul> */
+}
+
+/* Body styling */
+body {
+  font: 100%/1.5 system-ui; /* Readable font and line height */
+  margin-inline: max(1em, (100% - 100ch) / 2); /* Center body content */
+}
+
+/* Navigation link styles */
 nav a {
-  flex: 1;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 0.5em;
+  flex: 1; /* Each link takes up equal space */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use parent text color */
+  text-align: center; /* Center the text inside links */
+  padding: 0.5em; /* Add internal spacing */
 }
 
+/* Navigation bar styles */
 nav {
-  margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1em; /* Add space below the navigation bar */
+  border-bottom: 1px solid oklch(80% 3% 200); /* Subtle bottom border */
 }
 
+/* Current page link style */
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0.1em;
+  border-bottom: 0.4em solid oklch(80% 3% 200); /* Highlight current link */
+  padding-bottom: 0.1em; /* Adjust padding for border height */
 }
 
+/* Hover effect */
 nav a:hover {
-  background-color: oklch(90% 3% 200);
+  background-color: oklch(90% 3% 200); /* Subtle background color on hover */
 }
