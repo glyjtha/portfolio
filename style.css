@@ -1,4 +1,9 @@
 /* Reset <ul> and <li> */
+body {
+  font: 100%/1.5 system-ui;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -6,42 +11,42 @@ nav ul {
   padding: 0 auto;
 
 }
-/* Body styling */
-body {
-  font: 100%/1.5 system-ui;
-  margin-inline: max(1em, (100% - 100ch) / 2);
+
+nav ul li {
+  flex: 1;
 }
+
 /* Navigation bar container */
 nav {
-  display: flex; /* Enable Flexbox for layout */
-  align-items: center; /* Vertically center items */
-  justify-content: space-evenly; /* Add equal spacing between items */
-  margin: 0 auto; /* Center the navigation bar */
-  padding: 0.5em 0; /* Add padding for spacing */
-  border-bottom: 1px solid oklch(80% 3% 200); /* Bottom border for separation */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 /* Navigation link styles */
 nav a {
-  flex: 1; /* Allow each link to take up equal space */
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit the text color */
-  text-align: center; /* Center-align link text */
-  padding: 0.5em; /* Add padding around the text */
-  transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effects */
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease; 
 }
 
 /* Hover effect for links */
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent); /* Accent color on hover */
-  background-color: oklch(from var(--color-accent) 95% 5% h); /* Slightly lighter background */
-}
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);}
 
 /* Current (active) link styles */
 nav a.current {
   border-bottom: 0.4em solid var(--color-accent); /* Highlight with accent color */
   padding-bottom: 0.1em; /* Adjust padding for consistent spacing */
   font-weight: bold; /* Optional: Make the current link bold */
+  background-color: gainsboro;
 }
 
 /* Define color variables */
@@ -69,33 +74,33 @@ nav a.current {
 /* Style form inputs and textareas */
 .contact-form input,
 .contact-form textarea {
-  display: block; /* Place controls on a new line */
-  font: inherit; /* Inherit font from the page */
-  padding: 0.5em; /* Add internal spacing */
-  box-sizing: border-box; /* Ensure proper box-sizing */
-  width: 100%; /* Make inputs and textareas full width */
-  margin-block: 0.5em; /* Add space above and below */
+  display: block;
+  font: inherit;
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 100%; 
+  margin-block: 0.5em;
 }
 
 /* Style the submit button */
 .contact-form button {
-  font: inherit; /* Ensure consistent font with the page */
-  background-color: var(--color-accent, #007BFF); /* Use the accent color */
-  color: white; /* Button text color */
-  border: none; /* Remove border */
-  cursor: pointer; /* Pointer cursor on hover */
-  padding: 0.75em 1.5em; /* Add spacing inside the button */
-  border-radius: 4px; /* Slightly rounded corners */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-  margin-block: 0.5em; /* Space above and below */
+  font: inherit;
+  background-color: var(--color-accent, #007BFF); 
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-block: 0.5em;
 }
 
 .contact-form button:hover {
-  background-color: var(--color-accent-hover, #0056b3); /* Darker accent color on hover */
+  background-color: var(--color-accent-hover, #0056b3);
 }
 
 /* Adjust textarea height */
 .contact-form textarea {
-  resize: vertical; /* Allow vertical resizing only */
-  min-height: 100px; /* Set a minimum height */
+  resize: vertical;
+  min-height: 100px;
 }
