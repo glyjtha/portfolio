@@ -7,13 +7,13 @@ body {
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0 auto;
-  padding: 0 auto;
-
+  margin: 0;
+  width: 100%;
 }
 
 nav ul li {
   flex: 1;
+  display: contents;
 }
 
 /* Navigation bar container */
@@ -21,13 +21,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 0.5em 0;
+  width: 100%; 
   border-bottom: 1px solid oklch(80% 3% 200);
+  box-sizing: border-box;
 }
 
 /* Navigation link styles */
 nav a {
+  align-items: center;
   flex: 1;
   text-decoration: none;
   color: inherit;
@@ -42,11 +43,12 @@ nav a:hover {
   background-color: oklch(from var(--color-accent) 95% 5% h);}
 
 /* Current (active) link styles */
-nav a.current {
+nav ul li a.current {
   border-bottom: 0.4em solid var(--color-accent); /* Highlight with accent color */
-  padding-bottom: 0.1em; /* Adjust padding for consistent spacing */
   font-weight: bold; /* Optional: Make the current link bold */
-  background-color: gainsboro;
+  background-color:lightpink;
+  color: black; 
+  padding: 0.5em 1em;
 }
 
 /* Define color variables */
