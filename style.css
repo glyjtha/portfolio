@@ -40,18 +40,14 @@ nav a.current {
   border-bottom: 0.4em solid var(--color-accent); /* Highlight with the accent color */
   padding-bottom: 0.1em; /* Adjust padding to account for border */
 }
+
 /* Contact Form Styling */
 .contact-form {
   display: grid; /* Use grid layout for form alignment */
   gap: 1em; /* Add spacing between form elements */
   grid-column: 1 / -1;
-  max-width: 600px; /* Limit the width of the form */
   margin: 0 auto; /* Center the form on the page */
   padding: 1em; /* Add padding around the form */
-  background-color: #f9f9f9; /* Light background for contrast */
-  border: 1px solid #ccc; /* Subtle border for the form */
-  border-radius: 8px; /* Rounded corners */
-  width: 100%
 }
 
 /* Style form labels */
@@ -67,8 +63,6 @@ nav a.current {
   display: block; /* Place controls on a new line */
   font: inherit; /* Inherit font from the page */
   padding: 0.5em; /* Add internal spacing */
-  border: 1px solid #ccc; /* Subtle border for inputs */
-  border-radius: 4px; /* Slightly rounded corners */
   box-sizing: border-box; /* Ensure proper box-sizing */
   width: 100%; /* Make inputs and textareas full width */
   margin-block: 0.5em; /* Add space above and below */
