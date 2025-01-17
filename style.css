@@ -16,6 +16,7 @@ body {
 nav {
   display: flex; /*flexbox*/
   align-items: center;
+  justify-content: space-evenly;
   margin: 0 auto; 
   padding: 0.5em;
   border-bottom: 1px solid oklch(80% 3% 200);
@@ -31,12 +32,6 @@ nav a {
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Navigation bar styles */
-nav {
-  margin-bottom: 0 auto;
-  border-bottom: 1px solid oklch(80% 3% 200); 
-}
-
 :root {
   --color-accent: oklch(65% 50% 0);}
 
@@ -48,12 +43,12 @@ nav a:hover {
 nav a.current {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  border-bottom-color: oklch(80% 3% 200)
+  font-weight: bold;
 }
 
 /* Contact Form Styling */
 .contact-form {
-  display: grid; /* Use grid layout for form alignment */
+  display: grid;
   gap: 1em; /* Add spacing between form elements */
   grid-column: 1 / -1;
   margin: 0 auto; /* Center the form on the page */
