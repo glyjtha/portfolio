@@ -40,3 +40,53 @@ nav a.current {
   border-bottom: 0.4em solid var(--color-accent); /* Highlight with the accent color */
   padding-bottom: 0.1em; /* Adjust padding to account for border */
 }
+
+/* Contact Form Styling */
+.contact-form {
+  display: grid; /* Use grid layout for form alignment */
+  gap: 1em; /* Add spacing between form elements */
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form on the page */
+  padding: 1em; /* Add padding around the form */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ccc; /* Subtle border for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Style form labels */
+.contact-form label {
+  font-weight: bold; /* Make labels stand out */
+}
+
+/* Style form inputs and textareas */
+.contact-form input,
+.contact-form textarea {
+  font: inherit; /* Inherit font from the page */
+  padding: 0.5em; /* Add internal spacing */
+  border: 1px solid #ccc; /* Subtle border for inputs */
+  border-radius: 4px; /* Slightly rounded corners */
+  box-sizing: border-box; /* Ensure proper box-sizing */
+  width: 100%; /* Make inputs and textareas full width */
+}
+
+/* Style the submit button */
+.contact-form button {
+  background-color: var(--color-accent, #007BFF); /* Use the accent color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0.75em 1.5em; /* Add spacing inside the button */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-form button:hover {
+  background-color: var(--color-accent-hover, #0056b3); /* Darker accent color on hover */
+}
+
+/* Adjust textarea height */
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px; /* Set a minimum height */
+}
