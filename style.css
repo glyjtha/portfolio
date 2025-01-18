@@ -70,7 +70,7 @@ nav ul li a.current {
 .contact-form label {
   font-weight: bold;
   display: block; 
-  margin-block: 0.5em;
+  margin-block: 0.5em;}
 
 /* Style form inputs and textareas */
 .contact-form input,
