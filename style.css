@@ -4,6 +4,7 @@ body {
   margin-inline: max(1em, (100% - 100ch) / 2);
 }
 
+/*NAVIGATION*/
 nav ul {
   display: flex;
   list-style: none;
@@ -56,22 +57,20 @@ nav ul li a.current {
   --color-accent: oklch(65% 50% 0); /* Define the primary accent color */
 }
 
-
+/*CONTACT PAGE*/
 /* Contact Form Styling */
 .contact-form {
   display: grid;
-  gap: 1em; /* Add spacing between form elements */
+  gap: 1em;
   grid-column: 1 / -1;
-  margin: 0 auto; /* Center the form on the page */
-  padding: 1em; /* Add padding around the form */
-}
+  margin: 0 auto;
+  padding: 1em;}
 
 /* Style form labels */
 .contact-form label {
-  font-weight: bold; /* Make labels stand out */
-  display: block; /* Ensure labels take up full width */
-  margin-block: 0.5em; /* Add space before and after */
-}
+  font-weight: bold;
+  display: block; 
+  margin-block: 0.5em;
 
 /* Style form inputs and textareas */
 .contact-form input,
@@ -107,4 +106,57 @@ nav ul li a.current {
 .contact-form textarea {
   resize: vertical;
   min-height: 100px;
+}
+
+/* PROJECT PAGE*/
+/* Projects Grid Container */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+  padding: 1em; 
+  box-sizing: border-box;}
+
+/* Article Elements */
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 1em; 
+  background-color: #f9f9f9; 
+}
+
+/* Aligning Content Inside Articles */
+.projects article h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.projects article img {
+  width: 100%;
+  height: auto;
+}
+
+.projects article p {
+  margin: 0.5em 0;
+}
+
+/* Global Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Specific Adjustments for h1 */
+h1 {
+  font-size: 400%;
+}
+
+/* Specific Adjustments for h2 */
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
 }
