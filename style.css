@@ -160,3 +160,76 @@ h2 {
   font-size: 1.8em;
   font-weight: bold;
 }
+
+/* CV PAGE */
+/* Resume Sections */
+#education, #skills, #research, #activities, #experience {
+  margin-bottom: 2em; /* Add spacing between sections */
+  padding: 1em; /* Add padding inside each section */
+  background-color: #ffffff; /* White background for sections */
+  border: 1px solid #ddd; /* Subtle border for separation */
+  border-radius: 0.5em; /* Rounded corners */
+}
+
+/* Section Titles */
+#education h2, #skills h2, #research h2, #activities h2, #experience h2 {
+  color: var(--color-accent);
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.2em;
+  margin-bottom: 1em;
+}
+
+/* Articles (Subsections) */
+#education article, #skills ul, #research article, #activities article, #experience article {
+  margin-bottom: 1.5em; }
+
+#education article h3, #research article h3, #activities article h3, #experience article h3 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+/* Lists Inside Articles */
+#education ul, #research ul, #activities ul, #experience ul {
+  list-style: none;
+  padding-left: 1em;}
+
+#education ul li, #research ul li, #activities ul li, #experience ul li {
+  position: relative;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+/* Custom bullets */
+#education ul li::before, #research ul li::before, #activities ul li::before, #experience ul li::before {
+  content: "•"; 
+  position: absolute;
+  left: -1em; 
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Header Styles for CV */
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+header h1 {
+  font-size: 2.5em; /* Large font for name */
+  color: #222;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #555; /* Subtle text color */
+}
+
+header a {
+  color: var(--color-accent); /* Link color */
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
