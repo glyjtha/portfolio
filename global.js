@@ -22,7 +22,7 @@ for (let p of pages) {
   let title = p.title;
 
   url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
-  
+
 
   // Create the anchor element
   let a = document.createElement('a');
@@ -40,3 +40,45 @@ for (let p of pages) {
 }
 
 console.log("Navigation built!");
+
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  `
+    <label class="color-scheme">
+      Theme:
+      <select id="theme-select">
+        <option value="auto" selected>Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="green">Comfort</option>
+      </select>
+    </label>
+  `
+);
+
+// 1) Grab the newly inserted <select>
+const selectEl = document.querySelector("#theme-select");
+
+// If there's a saved scheme in localStorage, apply it
+if ("colorScheme" in localStorage) {
+  const savedScheme = localStorage.colorScheme;
+  if (savedScheme === "auto") {
+    document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", savedScheme);
+  }
+  selectEl.value = savedScheme; // reflect in the dropdown
+}
+
+// When the user picks a theme, save it and apply it
+selectEl.addEventListener("change", (evt) => {
+  const mode = evt.target.value;
+  localStorage.colorScheme = mode; // persist
+
+  if (mode === "auto") {
+    document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", mode);
+  }
+});
+

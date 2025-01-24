@@ -1,8 +1,62 @@
+
+
+:root {
+  color-scheme: light;
+  --bg-color: #fff; 
+  --text-color: #000;
+}
+
+/*SET THEME FOR THE PAGE*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-color: #222;
+    --text-color: #ddd;
+    --hover-color: #E6E6FA;
+    --light-hover-color:oklch(81.42% 0.0419 282.71);
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-color: #fff; 
+  --text-color: #000;
+  --hover-color: #eb5573;
+  --light-hover-color:oklch(81.42% 0.1 11)
+}
+
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-color: #222;
+  --text-color: #ddd;
+  --hover-color: #b2b2f3;
+  --light-hover-color:oklch(81.42% 0.0419 282.71);
+}
+
+:root[data-theme="green"] {
+  color-scheme: light; 
+  --bg-color: #e6ffe6;  /* pale green background */
+  --text-color: #003300; /* darker green text */
+  --hover-color:#7b815c;
+  --light-hover-color:oklch(81.42% 0.1094 127.06);
+
+}
+
 /* Reset <ul> and <li> */
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font: 100%/1.5 system-ui;
   margin-inline: max(1em, (100% - 100ch) / 2);
 }
+
+/*position of the selector*/
+.color-scheme {
+  position: fixed;
+  top: 1rem; 
+  right: 1rem; }
+
 
 /*NAVIGATION*/
 nav ul {
@@ -40,22 +94,17 @@ nav a {
 
 /* Hover effect for links */
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);}
+  border-bottom: 0.4em solid var(--hover-color);
+  background-color: color-mix(in srgb, var(--light-hover-color), canvas 80%);
+}
 
 /* Current (active) link styles */
 nav a.current {
-  border-bottom: 0.4em solid var(--color-accent);
+  border-bottom: 0.4em solid var(--hover-color);;
   font-weight: bold;
-  background-color: lightpink;
-  color: black;
   padding: 0.5em 1em;
 }
 
-/* Define color variables */
-:root {
-  --color-accent: oklch(65% 50% 0); /* Define the primary accent color */
-}
 
 /*CONTACT PAGE*/
 /* Contact Form Styling */
@@ -88,7 +137,7 @@ nav a.current {
 /* Style the submit button */
 .contact-form button {
   font: inherit;
-  background-color: var(--color-accent, #007BFF); 
+  background-color: var(--hover-color); 
   color: white;
   border: none;
   cursor: pointer;
@@ -126,7 +175,6 @@ nav a.current {
   border: 1px solid #ccc;
   border-radius: 0.5em;
   padding: 1em; 
-  background-color: #f9f9f9; 
 }
 
 /* Aligning Content Inside Articles */
@@ -143,6 +191,7 @@ nav a.current {
 .projects article p {
   margin: 0.5em 0;
 }
+
 
 /* Global Heading Styles */
 h1, h2, h3, h4, h5, h6 {
@@ -166,14 +215,13 @@ h2 {
 #education, #skills, #research, #activities, #experience {
   margin-bottom: 2em; /* Add spacing between sections */
   padding: 1em; /* Add padding inside each section */
-  background-color: #ffffff; /* White background for sections */
   border: 1px solid #ddd; /* Subtle border for separation */
   border-radius: 0.5em; /* Rounded corners */
 }
 
 /* Section Titles */
 #education h2, #skills h2, #research h2, #activities h2, #experience h2 {
-  color: var(--color-accent);
+  color: var(--hover-color);
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.2em;
   margin-bottom: 1em;
@@ -186,7 +234,6 @@ h2 {
 #education article h3, #research article h3, #activities article h3, #experience article h3 {
   font-size: 1.4em;
   margin-bottom: 0.5em;
-  color: #333;
 }
 
 /* Lists Inside Articles */
@@ -202,10 +249,9 @@ h2 {
 
 /* Custom bullets */
 #education ul li::before, #research ul li::before, #activities ul li::before, #experience ul li::before {
-  content: "•"; 
   position: absolute;
   left: -1em; 
-  color: var(--color-accent);
+  color: var(--hover-color);
   font-weight: bold;
 }
 
@@ -217,19 +263,19 @@ header {
 
 header h1 {
   font-size: 2.5em; /* Large font for name */
-  color: #222;
 }
 
 header p {
   font-size: 1.1em;
-  color: #555; /* Subtle text color */
 }
 
 header a {
-  color: var(--color-accent); /* Link color */
+  color: var(--hover-color); /* Link color */
   text-decoration: none;
 }
 
 header a:hover {
   text-decoration: underline;
 }
+
+
