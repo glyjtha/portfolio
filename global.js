@@ -6,7 +6,7 @@ let pages = [
   { url: "projects/", title: "Projects" },
   { url: "contact/",  title: "Contact" },
   { url: "cv/",       title: "CV" },
-  { url: "https://glyjtha.github.io/portfolio/", title: "GitHub" }
+  { url: "https://github.com/glyjtha", title: "GitHub" }
 ];
 
 // 1) Create a <nav> and prepend it to <body>
@@ -30,7 +30,7 @@ for (let p of pages) {
   a.textContent = title;
   nav.append(a);
   
-  if (a.host === location.host && a.pathname === location.pathname && !a.href.includes("github.io")) {
+  if (a.host === location.host && a.pathname === location.pathname) {
     a.classList.add('current');
   }
 
@@ -50,7 +50,7 @@ document.body.insertAdjacentHTML(
         <option value="auto" selected>Automatic</option>
         <option value="light">Light</option>
         <option value="dark">Dark</option>
-        <option value="green">Comfort</option>
+        <option value="green">Dark</option>
       </select>
     </label>
   `
