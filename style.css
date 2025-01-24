@@ -4,6 +4,8 @@
   color-scheme: light;
   --bg-color: #fff; 
   --text-color: #000;
+  --hover-color: #eb5573;
+  --light-hover-color:oklch(81.42% 0.1 11);
 }
 
 /*SET THEME FOR THE PAGE*/
@@ -22,7 +24,7 @@
   --bg-color: #fff; 
   --text-color: #000;
   --hover-color: #eb5573;
-  --light-hover-color:oklch(81.42% 0.1 11)
+  --light-hover-color:oklch(81.42% 0.1 11);
 }
 
 
