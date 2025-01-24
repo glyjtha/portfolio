@@ -248,7 +248,8 @@ h2 {
 }
 
 /* Custom bullets */
-#education ul li::before, #research ul li::before, #activities ul li::before, #experience ul li::before {
+#research ul li::before, #activities ul li::before, #experience ul li::before {
+  content: "•";  
   position: absolute;
   left: -1em; 
   color: var(--hover-color);
